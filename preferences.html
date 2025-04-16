@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Edit Parrot Preferences - Soothing Squwaks</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <!-- Replace logo.png with your actual logo file -->
+                    <img src="images/logo.png" alt="Soothing Squawks Logo" />
+                    <span>Soothing Squawks</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="products.html">Match</a></li>
+                        <li><a href="learn.html">Learn</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="index.html">Support</a></li>
+                    </ul>
+                </nav>
+                <div class="profile">
+                    <a href="profile.html"><img src="images/phillip_schall_web.jpg" /></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Section: Edit Parrot Preferences Card -->
+        <main>
+            <div class="prefs-card">
+                <h2>Edit Parrot Preferences</h2>
+                <form action="#" method="POST">
+                    <!-- Age -->
+                    <div class="form-group">
+                        <label for="age">Age (years)</label>
+                        <input id="age" type="number" name="age" min="1" max="50" value="2" />
+                    </div>
+                    <!-- Breed -->
+                    <div class="form-group">
+                        <label for="breed">Breed</label>
+                        <select id="breed" name="breed">
+                            <option value="macaw" selected>Macaw</option>
+                            <option value="cockatoo">Cockatoo</option>
+                            <option value="conure">Conure</option>
+                            <option value="parakeet">Parakeet</option>
+                            <option value="lorikeet">Lorikeet</option>
+                        </select>
+                    </div>
+                    <!-- Energy Level -->
+                    <div class="form-group">
+                        <label for="energy">Energy Level</label>
+                        <select id="energy" name="energy" class="energy">
+                            <option value="high">High</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <!-- Dominant Color -->
+                    <div class="form-group">
+                        <label for="color">Dominant Color</label>
+                        <input id="color" type="color" name="color" value="#ffde59" />
+                    </div>
+                    <!-- Favorite Food -->
+                    <div class="form-group">
+                        <label>Favorite Food</label>
+                        <div style="margin-left: 16px">
+                            <div class="checkbox-group">
+                                <input
+                                    type="checkbox"
+                                    id="foodSeeds"
+                                    name="favoriteFood"
+                                    value="seeds"
+                                    checked
+                                />
+                                <label for="foodSeeds">Seeds</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input
+                                    type="checkbox"
+                                    id="foodFruits"
+                                    name="favoriteFood"
+                                    value="fruits"
+                                />
+                                <label for="foodFruits">Fruits</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input
+                                    type="checkbox"
+                                    id="foodVegetables"
+                                    name="favoriteFood"
+                                    value="vegetables"
+                                />
+                                <label for="foodVegetables">Vegetables</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form Actions -->
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Save Preferences</button>
+                        <button type="button" class="cancel-btn" onclick="window.history.back();">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 Soothing Squwaks. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
