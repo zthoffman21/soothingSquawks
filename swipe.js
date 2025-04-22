@@ -102,8 +102,22 @@ const fred = new Bird(
     "Macaw",
     "Fred is a bright-spirited three-year-old macaw who truly comes alive when interacting with you. He loves mastering new words and phrases, often surprising everyone with an impromptu “hello!” or whistle. Fred thrives on mental stimulation—he eagerly tackles puzzle toys and enjoys learning simple tricks like ringing a bell or tossing a small toy back on cue. Always ready for a chat or a playful game, his outgoing personality and affectionate charm make him an unforgettable companion."
 );
+const alf = new Bird(
+    "images/parrot7.webp",
+    "Alf",
+    "1 Year Old Parakeet",
+    "Parakeet",
+    "Alf is a lively one-year-old parakeet with a big personality packed into a small frame. He loves being part of the action, especially when there’s music or conversation nearby. Curious and quick to learn, Alf enjoys interactive play and has a knack for picking up on routines. His cheerful energy makes him a fun and engaging companion."
+);
+const dan = new Bird(
+    "images/parrot8.webp",
+    "Dan",
+    "5 Year Old Parakeet",
+    "Parakeet",
+    "Dan is a calm and thoughtful five-year-old parakeet who enjoys a steady routine and quiet companionship. He’s attentive and observant, often taking his time to explore new things at his own pace. Dan appreciates gentle interaction and thrives in a peaceful environment where he can bond closely with his favorite people."
+);
 
-const birds = [john, bert, jeff, bob, tom, fred];
+const birds = [john, bert, jeff, bob, tom, fred, alf, dan];
 let currentBird = 0;
 
 // Get references to elements
@@ -144,12 +158,12 @@ rightArrow.addEventListener("click", () => {
     birdCard.classList.add("swipe-right");
     const matchedBird = birds[currentBird];
 	
-    if (Math.random() < 0.5) {
+    if (Math.random() < 0.6) {
         setTimeout(() => {
             match(matchedBird);
             matchScreen.style.opacity = 1;
 
-        }, getRandomInt(1000, 10000));
+        }, getRandomInt(1000, 7000));
     }
 	
     setTimeout(() => {
