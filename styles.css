@@ -168,15 +168,14 @@ main {
 
 /* Bird Information Section */
 .arrow-container {
-    width: 150px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 16px;
 }
 .arrow {
-    width: 100px;
-    height: 100px;
+    width: 150px;
 }
 
 .bird-info {
@@ -185,6 +184,13 @@ main {
     align-items: center;
     min-height: 70vh;
     padding: 20px;
+}
+
+#compatibility {
+    width: auto;
+    position: absolute;
+    bottom: 16px;
+    left: 8px;
 }
 
 #bird-box {
@@ -217,6 +223,7 @@ main {
 
 .bird-image {
     flex: 0 0 auto;
+    position: relative; 
 }
 
 .bird-image img {

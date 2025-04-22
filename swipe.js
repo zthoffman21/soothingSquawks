@@ -1,6 +1,7 @@
 class Bird {
-    constructor(imagePath, name, age, type, description) {
+    constructor(imagePath, compPath, name, age, type, description) {
         this.imagePath = imagePath;
+        this.compPath = compPath
         this.name = name;
         this.age = age;
         this.type = type;
@@ -12,6 +13,7 @@ class Bird {
         return `
         <div class="bird-image">
           <img src="${this.imagePath}" alt="${this.name}" />
+          <img id="compatibility" src="${this.compPath}" alt="Bird Compatibility">
         </div>
         <div class="bird-details">
           <div class="bird-main-info">
@@ -62,6 +64,7 @@ function match(bird) {
 // Example bird objects
 const john = new Bird(
     "images/parrot1.jpg",
+    "images/compHigh.png",
     "John",
     "2 Year Old Macaw",
     "Macaw",
@@ -69,6 +72,7 @@ const john = new Bird(
 );
 const bert = new Bird(
     "images/parrot2.webp",
+    "images/compLow.png",
     "Bert",
     "4 Year Old Cockatoo",
     "Cockatoo",
@@ -76,6 +80,7 @@ const bert = new Bird(
 );
 const jeff = new Bird(
     "images/parrot3.jpg",
+    "images/compMedHigh.png",
     "Jeff",
     "1 Year Old Parakeet",
     "Parakeet",
@@ -83,6 +88,7 @@ const jeff = new Bird(
 );
 const bob = new Bird(
     "images/parrot4.jfif",
+    "images/compMedLow.png",
     "Bob",
     "7 Year Old Cockatoo",
     "Cockatoo",
@@ -90,6 +96,7 @@ const bob = new Bird(
 );
 const tom = new Bird(
     "images/parrot5.jfif",
+    "images/compHigh.png",
     "Tom",
     "3 Year Old Parakeet",
     "Parakeet",
@@ -97,6 +104,7 @@ const tom = new Bird(
 );
 const fred = new Bird(
     "images/parrot6.avif",
+    "images/compMedLow.png",
     "Fred",
     "3 Year Old Macaw",
     "Macaw",
@@ -104,6 +112,7 @@ const fred = new Bird(
 );
 const alf = new Bird(
     "images/parrot7.webp",
+    "images/compHigh.png",
     "Alf",
     "1 Year Old Parakeet",
     "Parakeet",
@@ -111,6 +120,7 @@ const alf = new Bird(
 );
 const dan = new Bird(
     "images/parrot8.webp",
+    "images/compMedHigh.png",
     "Dan",
     "5 Year Old Parakeet",
     "Parakeet",
@@ -137,12 +147,12 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+}
 
 // Add click listeners for swiping left
 leftArrow.addEventListener("click", () => {
     birdCard.classList.add("swipe-left");
-	
+
     setTimeout(() => {
         updateBirdCard();
 
@@ -157,15 +167,14 @@ leftArrow.addEventListener("click", () => {
 rightArrow.addEventListener("click", () => {
     birdCard.classList.add("swipe-right");
     const matchedBird = birds[currentBird];
-	
+
     if (Math.random() < 0.6) {
         setTimeout(() => {
             match(matchedBird);
             matchScreen.style.opacity = 1;
-
         }, getRandomInt(1000, 7000));
     }
-	
+
     setTimeout(() => {
         updateBirdCard();
 
